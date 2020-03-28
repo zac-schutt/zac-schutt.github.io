@@ -256,7 +256,6 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
                     // read the current/previous setting
                   $(".table-sort tbody td input").each(function() {
                       var name = $(this).attr('name');
-                      console.log(Cookies.get(name));
                       if (Cookies.get(name) && Cookies.get(name) =="true") {
                           $(this).prop('checked', true);
                       }
