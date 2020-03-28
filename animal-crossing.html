@@ -11,6 +11,8 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
     <title>Animal Crossing Guide</title>
     <meta name="viewport" content="width=device-width, user-scalable=no" />
 
@@ -28,10 +30,11 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
   <body>
     <div class="container-fluid">
       <h1>Animal Crossing Guide</h1>
-      <input type="text" id="myInput" placeholder="Search..."></input>
+      <input type="text" id="myInput" placeholder="Search..."></input> <input type="checkbox" id="unticked">Show Only Unchecked</input>
       <h2 id="h-fish">Fish</h2>
       <table class="table table-bordered table-sm table-sort" id="fish">
         <thead> <tr>
+          <th><ion-icon name="checkmark-done-outline"></ion-icon></th>
             <th>Name</th>
             <th>Price</th>
             <th>Location</th>
@@ -39,91 +42,92 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
             <th>Months</th>
           </tr>
         </thead> <tbody>
-          <tr><td>Anchovy <br /><img src="img/Anchovy_ACNH.png"></td><td>200</td><td>Sea</td><td>4am - 9pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Angelfish <br /><img src="img/Angelfish_ACNH.png"></td><td>3,000</td><td>River</td><td>4pm - 9am</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Arapaima <br /><img src="img/Arapaima_ACNH.png"></td><td>10,000</td><td>River</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Arowana <br /><img src="img/Arowana_ACNH.png"></td><td>10,000</td><td>River</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Barred Knifejaw <br /><img src="img/Barred_Knifejaw_ACNH.png"></td><td>5,000</td><td>Sea</td><td>All Day</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
-          <tr><td>Barreleye <br /><img src="img/Barreleye_ACNH.png"></td><td>15,000</td><td>Sea</td><td>9pm - 4am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Betta <br /><img src="img/Betta_ACNH.png"></td><td>2,500</td><td>River</td><td>9am - 4pm</td><td>Nov, Dev, Jan, Feb, Mar</td></tr>
-          <tr><td>Bitterling <br /><img src="img/Bitterling_ACNH.png"></td><td>900</td><td>River</td><td>All Day</td><td>May, Jun, Jul, Aug, Sep</td></tr>
-          <tr><td>Black Bass <br /><img src="img/Black_Bass_ACNH.png"></td><td>400</td><td>River</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Blowfish <br /><img src="img/Blowfish_ACNH.png"></td><td>5,000</td><td>Sea</td><td>9pm - 4am</td><td>May, Jun, Jul, Aug</td></tr>
-          <tr><td>Blue Marlin <br /><img src="img/Blue_Marlin_ACNH.png"></td><td>10,000</td><td>Pier</td><td>All Day</td><td>Jan, Feb, Mar, May, Jun, Jul, Aug, Sep, Oct</td></tr>
-          <tr><td>Bluegill <br /><img src="img/Bluegill_ACNH.png"></td><td>180</td><td>River</td><td>9am - 4pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Butterfly Fish <br /><img src="img/Butterfly_Fish_ACNH.png"></td><td>1,000</td><td>Sea</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Carp <br /><img src="img/Carp_ACNH.png"></td><td>300</td><td>Pond</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Catfish <br /><img src="img/Catfish_ACNH.png"></td><td>800</td><td>Pond</td><td>4pm - 9am</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Char <br /><img src="img/Char_ACNH.png"></td><td>3,800</td><td>River (Clifftop)</td><td>4pm - 9am</td><td>Mar, Apr, May, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Cherry Salmon <br /><img src="img/Cherry_Salmon_ACNH.png"></td><td>1,000</td><td>River (Clifftop)</td><td>4pm - 9am</td><td>Mar, Apr, May, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Clownfish <br /><img src="img/Clownfish_ACNH.png"></td><td>650</td><td>Sea</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Coelacanth <br /><img src="img/Coelacanth_ACNH.png"></td><td>15,000</td><td>Sea (Rainy Days)</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Crawfish <br /><img src="img/Crawfish_ACNH.png"></td><td>200</td><td>Pond</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Crucian Carp <br /><img src="img/Crucian_Carp_ACNH.png"></td><td>160</td><td>River</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Dab <br /><img src="img/Dab_ACNH.png"></td><td>300</td><td>Sea</td><td>All Day</td><td>Aug, Sep, Oct</td></tr>
-          <tr><td>Dace <br /><img src="img/Dace_ACNH.png"></td><td>240</td><td>River</td><td>4pm - 9am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Dorado <br /><img src="img/Dorado_ACNH.png"></td><td>15,000</td><td>River</td><td>4am - 9pm</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Football Fish <br /><img src="img/Football_Fish_ACNH.png"></td><td>2,500</td><td>Sea</td><td>4pm - 9am</td><td>May, Jun, Jul, Aug, Sep</td></tr>
-          <tr><td>Freshwater Goby <br /><img src="img/Freshwater_Goby_ACNH.png"></td><td>400</td><td>River</td><td>4pm - 9am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Frog <br /><img src="img/Frog_ACNH.png"></td><td></td><td>Pond</td><td>All Day</td><td>Nov, Dec, Jan, Feb</td></tr>
-          <tr><td>Gar <br /><img src="img/Gar_ACNH.png"></td><td>6,000</td><td>Pond</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Giant Snakehead <br /><img src="img/Giant_Snakehead_ACNH.png"></td><td></td><td>Pond</td><td>9am - 4pm</td><td>Dec, Jan, Feb</td></tr>
-          <tr><td>Giant Trevally <br /><img src="img/Giant_Trevally_ACNH.png"></td><td>4,500</td><td>Pier</td><td>All Day</td><td>Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Golden Trout <br /><img src="img/Golden_Trout_ACNH.png"></td><td>15,000</td><td>River (Clifftop)</td><td>4pm - 9am</td><td>Mar, Apr, May, Sep, Oct, Nov</td></tr>
-          <tr><td>Goldfish <br /><img src="img/Goldfish_ACNH.png"></td><td>1,300</td><td>Pond</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Great White Shark <br /><img src="img/Great_White_Shark_ACNH.png"></td><td>15,000</td><td>Sea</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Guppy <br /><img src="img/Guppy_ACNH.png"></td><td>1,300</td><td>River</td><td>9am - 4pm</td><td>Oct, Nov, Jan, Feb, Mar, Apr, May</td></tr>
-          <tr><td>Hammerhead Shark <br /><img src="img/Hammerhead_Shark_ACNH.png"></td><td>8,000</td><td>Sea</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Horse Mackerel <br /><img src="img/Horse_Mackerel_ACNH.png"></td><td>150</td><td>Sea</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Killifish <br /><img src="img/Killifish_ACNH.png"></td><td>300</td><td>Pond</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb</td></tr>
-          <tr><td>King Salmon <br /><img src="img/King_Salmon_ACNH.png"></td><td>1,800</td><td>River (Month)</td><td>All Day</td><td>Mar</td></tr>
-          <tr><td>Koi <br /><img src="img/Koi_ACNH.png"></td><td>4,000</td><td>Pond</td><td>4pm - 9am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Loach <br /><img src="img/Loach_ACNH.png"></td><td>400</td><td>River</td><td>All Day</td><td>Sep, Oct, Nov</td></tr>
-          <tr><td>Mahi-mahi <br /><img src="img/Mahi-mahi_ACNH.png"></td><td>6,000</td><td>Pier</td><td>All Day</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Mitten Crab <br /><img src="img/Mitten_Crab_ACNH.png"></td><td>2,000</td><td>River</td><td>4pm - 9am</td><td>Mar, Apr, May</td></tr>
-          <tr><td>Moray Eel <br /><img src="img/Moray_Eel_ACNH.png"></td><td>2,000</td><td>Sea</td><td>All Day</td><td>Feb, Mar, Apr</td></tr>
-          <tr><td>Napoleonfish <br /><img src="img/Napoleonfish_ACNH.png"></td><td>10,000</td><td>Sea</td><td>4am - 9pm</td><td>Jan, Feb</td></tr>
-          <tr><td>Neon Tetra <br /><img src="img/Neon_Tetra_ACNH.png"></td><td>500</td><td>River</td><td>9am - 4pm</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
-          <tr><td>Nibble Fish <br /><img src="img/Nibble_Fish_ACNH.png"></td><td>1,500</td><td>River</td><td>9am - 4pm</td><td>Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Oarfish <br /><img src="img/Oarfish_ACNH.png"></td><td>9,000</td><td>Sea</td><td>All Day</td><td>Jun, Jul, Aug, Sep, Oct, Nov</td></tr>
-          <tr><td>Ocean Sunfish <br /><img src="img/Ocean_Sunfish_ACNH.png"></td><td>4,000</td><td>Sea</td><td>4am - 9pm</td><td>Jan, Feb, Mar</td></tr>
-          <tr><td>Olive Flounder <br /><img src="img/Olive_Flounder_ACNH.png"></td><td>800</td><td>Sea</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Pale Chub <br /><img src="img/Pale_Chub_ACNH.png"></td><td>160</td><td>River</td><td>9am - 4pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Pike <br /><img src="img/Pike_ACNH.png"></td><td>1,800</td><td>River</td><td>All Day</td><td>Mar, Apr, May, Jun</td></tr>
-          <tr><td>Piranha <br /><img src="img/Piranha_ACNH.png"></td><td>2,500</td><td>River</td><td>9am - 4pm and 9pm - 4am</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Pond Smelt <br /><img src="img/Pond_Smelt_ACNH.png"></td><td></td><td>River</td><td>All Day</td><td>Jun, Jul, Aug</td></tr>
-          <tr><td>Pop-eyed Goldfish <br /><img src="img/Pop-eyed_Goldfish_ACNH.png"></td><td>1,300</td><td>Pond</td><td>9am - 4pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Puffer Fish <br /><img src="img/Puffer_Fish_ACNH.png"></td><td>250</td><td>Sea</td><td>All Day</td><td>Jan, Feb, Mar</td></tr>
-          <tr><td>Rainbowfish <br /><img src="img/Rainbowfish_ACNH.png"></td><td>800</td><td>River</td><td>9am - 4pm</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Ranchu Goldfish <br /><img src="img/Ranchu_Goldfish_ACNH.png"></td><td>4,500</td><td>Pond</td><td>9am - 4pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Ray <br /><img src="img/Ray_ACNH.png"></td><td>3,000</td><td>Sea</td><td>4am - 9pm</td><td>Feb, Mar, Apr, May</td></tr>
-          <tr><td>Red Snapper <br /><img src="img/Red_Snapper_ACNH.png"></td><td>3,000</td><td>Sea</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Ribbon Eel <br /><img src="img/Ribbon_Eel_ACNH.png"></td><td>600</td><td>Sea</td><td>All Day</td><td>Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Saddled Bichir <br /><img src="img/Saddled_Bichir_ACNH.png"></td><td>4,000</td><td>River</td><td>9pm - 4am</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Salmon <br /><img src="img/Salmon_ACNH.png"></td><td>700</td><td>River (Clifftop)</td><td>All Day</td><td>Mar</td></tr>
-          <tr><td>Saw Shark <br /><img src="img/Saw_Shark_ACNH.png"></td><td>12,000</td><td>Sea</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Sea Bass <br /><img src="img/Sea_Bass_ACNH.png"></td><td>400</td><td>Sea</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Sea Butterfly <br /><img src="img/Sea_Butterfly_ACNH.png"></td><td>1,000</td><td>Sea</td><td>All Day</td><td>Jun, Jul, Aug, Sep</td></tr>
-          <tr><td>Seahorse <br /><img src="img/Seahorse_ACNH.png"></td><td>1,100</td><td>Sea</td><td>All Day</td><td>Oct, Nov, Jan, Feb, Mar, Apr, May</td></tr>
-          <tr><td>Snapping Turtle <br /><img src="img/Snapping_Turtle_ACNH.png"></td><td>5,000</td><td>River</td><td>9pm - 4am</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Soft-shelled Turtle <br /><img src="img/Soft-shelled_Turtle_ACNH.png"></td><td>3,750</td><td>River</td><td>4pm - 9am</td><td>Feb, Mar</td></tr>
-          <tr><td>Squid <br /><img src="img/Squid_ACNH.png"></td><td>500</td><td>Sea</td><td>All Day</td><td>Jun, Jul, Aug, Sep, Oct, Nov, Dec, Jan, Feb</td></tr>
-          <tr><td>Stringfish <br /><img src="img/Stringfish_ACNH.png"></td><td>15,000</td><td>River (Clifftop)</td><td>4pm - 9am</td><td>Jun, Jul, Aug, Sep</td></tr>
-          <tr><td>Sturgeon <br /><img src="img/Sturgeon_ACNH.png"></td><td>10,000</td><td>River (Mouth)</td><td>All Day</td><td>Mar, Apr, May, Jun, Jul, Aug, Sep</td></tr>
-          <tr><td>Suckerfish <br /><img src="img/Suckerfish_ACNH.png"></td><td>1,500</td><td>Sea</td><td>All Day</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Surgeonfish <br /><img src="img/Surgeonfish_ACNH.png"></td><td>1,000</td><td>Sea</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Sweetfish <br /><img src="img/Sweetfish_ACNH.png"></td><td>900</td><td>River</td><td>All Day</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Tadpole <br /><img src="img/Tadpole_ACNH.png"></td><td>100</td><td>Pond</td><td>All Day</td><td>Sep, Oct, Nov, Dev, Jan</td></tr>
-          <tr><td>Tilapia <br /><img src="img/Tilapia_ACNH.png"></td><td>800</td><td>River</td><td>All Day</td><td>Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Tuna <br /><img src="img/Tuna_ACNH.png"></td><td>7,000</td><td>Pier</td><td>All Day</td><td>May, Jun, Jul, Aug, Sep, Oct</td></tr>
-          <tr><td>Whale Shark <br /><img src="img/Whale_Shark_ACNH.png"></td><td>13,000</td><td>Sea</td><td>All Day</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Yellow Perch <br /><img src="img/Yellow_Perch_ACNH.png"></td><td>300</td><td>River</td><td>All Day</td><td>Apr, May, Jun, Jul, Aug, Sep</td></tr>
-          <tr><td>Zebra Turkeyfish <br /><img src="img/Zebra_Turkeyfish_ACNH.png"></td><td>500</td><td>Sea</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
-        </tbody>
+          <tr><td><input type="checkbox" name="ACNH_Anchovy "></td><td>Anchovy <br /><img src="img/Anchovy_ACNH.png"></td><td>200</td><td>Sea</td><td>4am - 9pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Angelfish "></td><td>Angelfish <br /><img src="img/Angelfish_ACNH.png"></td><td>3,000</td><td>River</td><td>4pm - 9am</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Arapaima "></td><td>Arapaima <br /><img src="img/Arapaima_ACNH.png"></td><td>10,000</td><td>River</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Arowana "></td><td>Arowana <br /><img src="img/Arowana_ACNH.png"></td><td>10,000</td><td>River</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Barred Knifejaw "></td><td>Barred Knifejaw <br /><img src="img/Barred_Knifejaw_ACNH.png"></td><td>5,000</td><td>Sea</td><td>All Day</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Barreleye "></td><td>Barreleye <br /><img src="img/Barreleye_ACNH.png"></td><td>15,000</td><td>Sea</td><td>9pm - 4am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Betta "></td><td>Betta <br /><img src="img/Betta_ACNH.png"></td><td>2,500</td><td>River</td><td>9am - 4pm</td><td>Nov, Dev, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Bitterling "></td><td>Bitterling <br /><img src="img/Bitterling_ACNH.png"></td><td>900</td><td>River</td><td>All Day</td><td>May, Jun, Jul, Aug, Sep</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Black Bass "></td><td>Black Bass <br /><img src="img/Black_Bass_ACNH.png"></td><td>400</td><td>River</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Blowfish "></td><td>Blowfish <br /><img src="img/Blowfish_ACNH.png"></td><td>5,000</td><td>Sea</td><td>9pm - 4am</td><td>May, Jun, Jul, Aug</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Blue Marlin "></td><td>Blue Marlin <br /><img src="img/Blue_Marlin_ACNH.png"></td><td>10,000</td><td>Pier</td><td>All Day</td><td>Jan, Feb, Mar, May, Jun, Jul, Aug, Sep, Oct</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Bluegill "></td><td>Bluegill <br /><img src="img/Bluegill_ACNH.png"></td><td>180</td><td>River</td><td>9am - 4pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Butterfly Fish "></td><td>Butterfly Fish <br /><img src="img/Butterfly_Fish_ACNH.png"></td><td>1,000</td><td>Sea</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Carp "></td><td>Carp <br /><img src="img/Carp_ACNH.png"></td><td>300</td><td>Pond</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Catfish "></td><td>Catfish <br /><img src="img/Catfish_ACNH.png"></td><td>800</td><td>Pond</td><td>4pm - 9am</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Char "></td><td>Char <br /><img src="img/Char_ACNH.png"></td><td>3,800</td><td>River (Clifftop)</td><td>4pm - 9am</td><td>Mar, Apr, May, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Cherry Salmon "></td><td>Cherry Salmon <br /><img src="img/Cherry_Salmon_ACNH.png"></td><td>1,000</td><td>River (Clifftop)</td><td>4pm - 9am</td><td>Mar, Apr, May, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Clownfish "></td><td>Clownfish <br /><img src="img/Clownfish_ACNH.png"></td><td>650</td><td>Sea</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Coelacanth "></td><td>Coelacanth <br /><img src="img/Coelacanth_ACNH.png"></td><td>15,000</td><td>Sea (Rainy Days)</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Crawfish "></td><td>Crawfish <br /><img src="img/Crawfish_ACNH.png"></td><td>200</td><td>Pond</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Crucian Carp "></td><td>Crucian Carp <br /><img src="img/Crucian_Carp_ACNH.png"></td><td>160</td><td>River</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Dab "></td><td>Dab <br /><img src="img/Dab_ACNH.png"></td><td>300</td><td>Sea</td><td>All Day</td><td>Aug, Sep, Oct</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Dace "></td><td>Dace <br /><img src="img/Dace_ACNH.png"></td><td>240</td><td>River</td><td>4pm - 9am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Dorado "></td><td>Dorado <br /><img src="img/Dorado_ACNH.png"></td><td>15,000</td><td>River</td><td>4am - 9pm</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Football Fish "></td><td>Football Fish <br /><img src="img/Football_Fish_ACNH.png"></td><td>2,500</td><td>Sea</td><td>4pm - 9am</td><td>May, Jun, Jul, Aug, Sep</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Freshwater Goby "></td><td>Freshwater Goby <br /><img src="img/Freshwater_Goby_ACNH.png"></td><td>400</td><td>River</td><td>4pm - 9am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Frog "></td><td>Frog <br /><img src="img/Frog_ACNH.png"></td><td></td><td>Pond</td><td>All Day</td><td>Nov, Dec, Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Gar "></td><td>Gar <br /><img src="img/Gar_ACNH.png"></td><td>6,000</td><td>Pond</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Giant Snakehead "></td><td>Giant Snakehead <br /><img src="img/Giant_Snakehead_ACNH.png"></td><td></td><td>Pond</td><td>9am - 4pm</td><td>Dec, Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Giant Trevally "></td><td>Giant Trevally <br /><img src="img/Giant_Trevally_ACNH.png"></td><td>4,500</td><td>Pier</td><td>All Day</td><td>Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Golden Trout "></td><td>Golden Trout <br /><img src="img/Golden_Trout_ACNH.png"></td><td>15,000</td><td>River (Clifftop)</td><td>4pm - 9am</td><td>Mar, Apr, May, Sep, Oct, Nov</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Goldfish "></td><td>Goldfish <br /><img src="img/Goldfish_ACNH.png"></td><td>1,300</td><td>Pond</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Great White Shark "></td><td>Great White Shark <br /><img src="img/Great_White_Shark_ACNH.png"></td><td>15,000</td><td>Sea</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Guppy "></td><td>Guppy <br /><img src="img/Guppy_ACNH.png"></td><td>1,300</td><td>River</td><td>9am - 4pm</td><td>Oct, Nov, Jan, Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Hammerhead Shark "></td><td>Hammerhead Shark <br /><img src="img/Hammerhead_Shark_ACNH.png"></td><td>8,000</td><td>Sea</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Horse Mackerel "></td><td>Horse Mackerel <br /><img src="img/Horse_Mackerel_ACNH.png"></td><td>150</td><td>Sea</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Killifish "></td><td>Killifish <br /><img src="img/Killifish_ACNH.png"></td><td>300</td><td>Pond</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_King Salmon "></td><td>King Salmon <br /><img src="img/King_Salmon_ACNH.png"></td><td>1,800</td><td>River (Month)</td><td>All Day</td><td>Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Koi "></td><td>Koi <br /><img src="img/Koi_ACNH.png"></td><td>4,000</td><td>Pond</td><td>4pm - 9am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Loach "></td><td>Loach <br /><img src="img/Loach_ACNH.png"></td><td>400</td><td>River</td><td>All Day</td><td>Sep, Oct, Nov</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Mahi-mahi "></td><td>Mahi-mahi <br /><img src="img/Mahi-mahi_ACNH.png"></td><td>6,000</td><td>Pier</td><td>All Day</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Mitten Crab "></td><td>Mitten Crab <br /><img src="img/Mitten_Crab_ACNH.png"></td><td>2,000</td><td>River</td><td>4pm - 9am</td><td>Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Moray Eel "></td><td>Moray Eel <br /><img src="img/Moray_Eel_ACNH.png"></td><td>2,000</td><td>Sea</td><td>All Day</td><td>Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Napoleonfish "></td><td>Napoleonfish <br /><img src="img/Napoleonfish_ACNH.png"></td><td>10,000</td><td>Sea</td><td>4am - 9pm</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Neon Tetra "></td><td>Neon Tetra <br /><img src="img/Neon_Tetra_ACNH.png"></td><td>500</td><td>River</td><td>9am - 4pm</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Nibble Fish "></td><td>Nibble Fish <br /><img src="img/Nibble_Fish_ACNH.png"></td><td>1,500</td><td>River</td><td>9am - 4pm</td><td>Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Oarfish "></td><td>Oarfish <br /><img src="img/Oarfish_ACNH.png"></td><td>9,000</td><td>Sea</td><td>All Day</td><td>Jun, Jul, Aug, Sep, Oct, Nov</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Ocean Sunfish "></td><td>Ocean Sunfish <br /><img src="img/Ocean_Sunfish_ACNH.png"></td><td>4,000</td><td>Sea</td><td>4am - 9pm</td><td>Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Olive Flounder "></td><td>Olive Flounder <br /><img src="img/Olive_Flounder_ACNH.png"></td><td>800</td><td>Sea</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Pale Chub "></td><td>Pale Chub <br /><img src="img/Pale_Chub_ACNH.png"></td><td>160</td><td>River</td><td>9am - 4pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Pike "></td><td>Pike <br /><img src="img/Pike_ACNH.png"></td><td>1,800</td><td>River</td><td>All Day</td><td>Mar, Apr, May, Jun</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Piranha "></td><td>Piranha <br /><img src="img/Piranha_ACNH.png"></td><td>2,500</td><td>River</td><td>9am - 4pm and 9pm - 4am</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Pond Smelt "></td><td>Pond Smelt <br /><img src="img/Pond_Smelt_ACNH.png"></td><td></td><td>River</td><td>All Day</td><td>Jun, Jul, Aug</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Pop-eyed Goldfish "></td><td>Pop-eyed Goldfish <br /><img src="img/Pop-eyed_Goldfish_ACNH.png"></td><td>1,300</td><td>Pond</td><td>9am - 4pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Puffer Fish "></td><td>Puffer Fish <br /><img src="img/Puffer_Fish_ACNH.png"></td><td>250</td><td>Sea</td><td>All Day</td><td>Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Rainbowfish "></td><td>Rainbowfish <br /><img src="img/Rainbowfish_ACNH.png"></td><td>800</td><td>River</td><td>9am - 4pm</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Ranchu Goldfish "></td><td>Ranchu Goldfish <br /><img src="img/Ranchu_Goldfish_ACNH.png"></td><td>4,500</td><td>Pond</td><td>9am - 4pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Ray "></td><td>Ray <br /><img src="img/Ray_ACNH.png"></td><td>3,000</td><td>Sea</td><td>4am - 9pm</td><td>Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Red Snapper "></td><td>Red Snapper <br /><img src="img/Red_Snapper_ACNH.png"></td><td>3,000</td><td>Sea</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Ribbon Eel "></td><td>Ribbon Eel <br /><img src="img/Ribbon_Eel_ACNH.png"></td><td>600</td><td>Sea</td><td>All Day</td><td>Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Saddled Bichir "></td><td>Saddled Bichir <br /><img src="img/Saddled_Bichir_ACNH.png"></td><td>4,000</td><td>River</td><td>9pm - 4am</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Salmon "></td><td>Salmon <br /><img src="img/Salmon_ACNH.png"></td><td>700</td><td>River (Clifftop)</td><td>All Day</td><td>Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Saw Shark "></td><td>Saw Shark <br /><img src="img/Saw_Shark_ACNH.png"></td><td>12,000</td><td>Sea</td><td>4pm - 9am</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Sea Bass "></td><td>Sea Bass <br /><img src="img/Sea_Bass_ACNH.png"></td><td>400</td><td>Sea</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Sea Butterfly "></td><td>Sea Butterfly <br /><img src="img/Sea_Butterfly_ACNH.png"></td><td>1,000</td><td>Sea</td><td>All Day</td><td>Jun, Jul, Aug, Sep</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Seahorse "></td><td>Seahorse <br /><img src="img/Seahorse_ACNH.png"></td><td>1,100</td><td>Sea</td><td>All Day</td><td>Oct, Nov, Jan, Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Snapping Turtle "></td><td>Snapping Turtle <br /><img src="img/Snapping_Turtle_ACNH.png"></td><td>5,000</td><td>River</td><td>9pm - 4am</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Soft-shelled Turtle "></td><td>Soft-shelled Turtle <br /><img src="img/Soft-shelled_Turtle_ACNH.png"></td><td>3,750</td><td>River</td><td>4pm - 9am</td><td>Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Squid "></td><td>Squid <br /><img src="img/Squid_ACNH.png"></td><td>500</td><td>Sea</td><td>All Day</td><td>Jun, Jul, Aug, Sep, Oct, Nov, Dec, Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Stringfish "></td><td>Stringfish <br /><img src="img/Stringfish_ACNH.png"></td><td>15,000</td><td>River (Clifftop)</td><td>4pm - 9am</td><td>Jun, Jul, Aug, Sep</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Sturgeon "></td><td>Sturgeon <br /><img src="img/Sturgeon_ACNH.png"></td><td>10,000</td><td>River (Mouth)</td><td>All Day</td><td>Mar, Apr, May, Jun, Jul, Aug, Sep</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Suckerfish "></td><td>Suckerfish <br /><img src="img/Suckerfish_ACNH.png"></td><td>1,500</td><td>Sea</td><td>All Day</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Surgeonfish "></td><td>Surgeonfish <br /><img src="img/Surgeonfish_ACNH.png"></td><td>1,000</td><td>Sea</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Sweetfish "></td><td>Sweetfish <br /><img src="img/Sweetfish_ACNH.png"></td><td>900</td><td>River</td><td>All Day</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Tadpole "></td><td>Tadpole <br /><img src="img/Tadpole_ACNH.png"></td><td>100</td><td>Pond</td><td>All Day</td><td>Sep, Oct, Nov, Dev, Jan</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Tilapia "></td><td>Tilapia <br /><img src="img/Tilapia_ACNH.png"></td><td>800</td><td>River</td><td>All Day</td><td>Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Tuna "></td><td>Tuna <br /><img src="img/Tuna_ACNH.png"></td><td>7,000</td><td>Pier</td><td>All Day</td><td>May, Jun, Jul, Aug, Sep, Oct</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Whale Shark "></td><td>Whale Shark <br /><img src="img/Whale_Shark_ACNH.png"></td><td>13,000</td><td>Sea</td><td>All Day</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Yellow Perch "></td><td>Yellow Perch <br /><img src="img/Yellow_Perch_ACNH.png"></td><td>300</td><td>River</td><td>All Day</td><td>Apr, May, Jun, Jul, Aug, Sep</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Zebra Turkeyfish "></td><td>Zebra Turkeyfish <br /><img src="img/Zebra_Turkeyfish_ACNH.png"></td><td>500</td><td>Sea</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
+          </tbody>
       </table>
       <h2 id="h-bugs">Bugs</h2>
       <table class="table table-bordered table-sm table-sort" id="bugs">
         <thead> <tr>
+          <th><ion-icon name="checkmark-done-outline"></ion-icon></th>
             <th>Name</th>
             <th>Price</th>
             <th>Location</th>
@@ -131,101 +135,110 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
             <th>Months</th>
           </tr>
         </thead> <tbody>
-          <tr><td>Scorpion <br /><img src="img/Scorpion_ACNH.png"></td><td>8,000</td><td>On Ground</td><td>7pm - 4am</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Common Butterfly <br /><img src="img/Common_Butterfly_ACNH.png"></td><td>160</td><td>AboveFlowers</td><td>4am - 7pm</td><td>Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Yellow Butterfly <br /><img src="img/Yellow_Butterfly_ACNH.png"></td><td>160</td><td>Flying</td><td>4am - 7pm</td><td>Mar, Apr, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Tiger Butterfly <br /><img src="img/Tiger_Butterfly_ACNH.png"></td><td>240</td><td>Flying</td><td>4am - 7pm</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Peacock Butterfly <br /><img src="img/Peacock_Butterfly_ACNH.png"></td><td>2,500</td><td>Above Purple, Black and BlueFlowers</td><td>4am - 7pm</td><td>Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Common Bluebottle <br /><img src="img/Common_Bluebottle_ACNH.png"></td><td>300</td><td>Flying</td><td>4am - 7pm</td><td>Oct , Nov, Dec, Jan, Feb</td></tr>
-          <tr><td>Paper Kite Butterfly <br /><img src="img/Paper_Kite_Butterfly_ACNH.png"></td><td>1,000</td><td>Flying</td><td>8am - 7pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Great Purple Emperor <br /><img src="img/Great_Purple_Emperor_ACNH.png"></td><td></td><td>Flying</td><td>4am - 7am</td><td>Nov, Dec, Jan, Feb</td></tr>
-          <tr><td>Monarch Butterfly <br /><img src="img/Monarch_Butterfly_ACNH.png"></td><td>140</td><td>Flying</td><td>4am - 5pm</td><td>Mar, Apr, May</td></tr>
-          <tr><td>Emperor Butterfly <br /><img src="img/Emperor_Butterfly_ACNH.png"></td><td>4,000</td><td>Flying</td><td>5pm - 8am</td><td>Jan,Feb,Mar,Jun,Jul,Aug,Sep,Dec</td></tr>
-          <tr><td>Agrias Butterfly <br /><img src="img/Agrias_Butterfly_ACNH.png"></td><td>3,000</td><td>Flying</td><td>8am - 5pm</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Rajah Brooke's Birdwing <br /><img src="img/Rajah_Brookes_Birdwing_ACNH.png"></td><td>2,500</td><td>Above Purple, Black and BlueFlowers</td><td>8am - 5pm</td><td>Jun,Jul,Aug,Oct,Nov,Dec,Jan,Feb,Mar</td></tr>
-          <tr><td>Queen Alexandra's Birdwing <br /><img src="img/Queen_Alexandras_Birdwing_ACNH.png"></td><td>4,000</td><td>Flying</td><td>8am - 4pm</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Moth <br /><img src="img/Moth_ACNH.png"></td><td>130</td><td>Around Light</td><td>7pm - 4am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Atlas Moth <br /><img src="img/Atlas_Moth_ACNH.png"></td><td>3,000</td><td>On Trees</td><td>7pm - 4am</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Madagascan Sunset Moth <br /><img src="img/Madagascan_Sunset_Moth_ACNH.png"></td><td>2,500</td><td>Flying</td><td>8am - 4pm</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Long Locust <br /><img src="img/Long_Locust_ACNH.png"></td><td>200</td><td>In Grass</td><td>8am - 7pm</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
-          <tr><td>Migratory Locust <br /><img src="img/Migratory_Locust_ACNH.png"></td><td>600</td><td>In Grass</td><td>8am - 7pm</td><td>Feb, Mar, Apr, May</td></tr>
-          <tr><td>Rice Grasshopper <br /><img src="img/Rice_Grasshopper_ACNH.png"></td><td>160</td><td>In Grass</td><td>8am - 7pm</td><td>Feb, Mar, Apr, May</td></tr>
-          <tr><td>Grasshopper <br /><img src="img/Grasshopper_ACNH.png"></td><td>160</td><td>In Grass</td><td>8am - 5pm</td><td>Jan, Feb, Mar</td></tr>
-          <tr><td>Cricket <br /><img src="img/Cricket_ACNH.png"></td><td>130</td><td>In Grass</td><td>5pm - 8am</td><td>Mar, Apr, May</td></tr>
-          <tr><td>Bell Cricket <br /><img src="img/Bell_Cricket_ACNH.png"></td><td>430</td><td>In Grass</td><td>5pm - 8am</td><td>Mar, Apr</td></tr>
-          <tr><td>Mantis <br /><img src="img/Mantis_ACNH.png"></td><td>430</td><td>OnFlowers</td><td>8am - 5pm</td><td>Sep, Oct, Nov, Dec, Jan, Mar, Apr</td></tr>
-          <tr><td>Orchid Mantis <br /><img src="img/Orchid_Mantis_ACNH.png"></td><td>2,400</td><td>On Flowers</td><td>8am - 5pm</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
-          <tr><td>Honeybee <br /><img src="img/Honeybee_ACNH.png"></td><td>200</td><td>AboveFlowers</td><td>8am - 5pm</td><td>Sep, Oct, Nov, Dec, Jan</td></tr>
-          <tr><td>Wasp <br /><img src="img/Wasp_ACNH.png"></td><td>2,500</td><td>Shaking Trees</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Brown Cicada <br /><img src="img/Brown_Cicada_ACNH.png"></td><td>250</td><td>On Trees</td><td>8am - 5pm</td><td>Jan, Feb</td></tr>
-          <tr><td>Robust Cicada <br /><img src="img/Robust_Cicada_ACNH.png"></td><td></td><td>On Trees</td><td>8am - 5pm</td><td>Jan, Feb</td></tr>
-          <tr><td>Giant Cicada <br /><img src="img/Giant_Cicada_ACNH.png"></td><td></td><td>On Trees</td><td>8am - 5pm</td><td>Jan, Feb</td></tr>
-          <tr><td>Walker Cicada <br /><img src="img/Walker_Cicada_ACNH.png"></td><td>400</td><td>On Trees</td><td>8am - 4pm</td><td>Feb, Mar</td></tr>
-          <tr><td>Evening Cicada <br /><img src="img/Evening_Cicada_ACNH.png"></td><td></td><td>On Trees</td><td>4am - 8am & 4pm - 7pm</td><td>Jan, Feb</td></tr>
-          <tr><td>Cicada Shell <br /><img src="img/Cicada_Shell_ACNH.png"></td><td></td><td>On Trees</td><td>All Day</td><td>Jan, Feb</td></tr>
-          <tr><td>Red Dragonfly <br /><img src="img/Red_Dragonfly_ACNH.png"></td><td>180</td><td>Flying</td><td>8am - 7pm</td><td>Mar, Apr</td></tr>
-          <tr><td>Darner Dragonfly <br /><img src="img/Darner_Dragonfly_ACNH.png"></td><td>230</td><td>Flying</td><td>8am - 5pm</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Banded Dragonfly <br /><img src="img/Banded_Dragonfly_ACNH.png"></td><td>4,500</td><td>Flying</td><td>8am - 5pm</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Damselfly <br /><img src="img/Damselfly_ACNH.png"></td><td>500</td><td>Flying</td><td>All Day</td><td>May, Jun, Jul, Aug</td></tr>
-          <tr><td>Firefly <br /><img src="img/Firefly_ACNH.png"></td><td>300</td><td>Above Freshwater</td><td>7pm - 4pm</td><td>Dec</td></tr>
-          <tr><td>Mole cricket <br /><img src="img/Mole_cricket_ACNH.png"></td><td>500</td><td>Underground</td><td>All Day</td><td>May, Jun, Jul, Aug, Sep, Oct, Nov</td></tr>
-          <tr><td>Pondskater <br /><img src="img/Pondskater_ACNH.png"></td><td>130</td><td>In Rivers</td><td>8am - 7pm</td><td>Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Diving Beetle <br /><img src="img/Diving_Beetle_ACNH.png"></td><td>800</td><td>In Rivers</td><td>8am - 7pm</td><td>Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Giant Water Bug <br /><img src="img/Giant_Water_Bug_ACNH.png"></td><td>2,000</td><td>On Ponds and Rivers</td><td>7pm - 8am</td><td>Jan, Feb, Mar, Oct, Nov, Dec</td></tr>
-          <tr><td>Stinkbug <br /><img src="img/Stinkbug_ACNH.png"></td><td>120</td><td>On Trees</td><td>All Day</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Man-faced Stink Bug <br /><img src="img/Man-faced_Stink_Bug_ACNH.png"></td><td>1,000</td><td>OnFlowers</td><td>7pm - 8am</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Ladybug <br /><img src="img/Ladybug_ACNH.png"></td><td>200</td><td>OnFlowers</td><td>8am - 5pm</td><td>Apr, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Tiger Beetle <br /><img src="img/Tiger_Beetle_ACNH.png"></td><td>1,500</td><td>Flying</td><td>All Day</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Jewel Beetle <br /><img src="img/Jewel_Beetle_ACNH.png"></td><td>2,400</td><td>On Trees</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb</td></tr>
-          <tr><td>Citrus Long-horned Beetle <br /><img src="img/Citrus_Long_horned_Beetle_ACNH.png"></td><td>350</td><td>On Tree Stumps</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Rosalia Batesi Beetle <br /><img src="img/Rosalia_Batesi_Beetle_ACNH.png"></td><td>3,000</td><td>On Tree Stumps</td><td>All Day</td><td>Nov, Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Blue Weevil Beetle <br /><img src="img/Blue_Weevil_Beetle_ACNH.png"></td><td></td><td>On Trees</td><td>All Day</td><td>Jan, Feb</td></tr>
-          <tr><td>Violin Beetle <br /><img src="img/Violin_Beetle_ACNH.png"></td><td>450</td><td>On Trees</td><td>All Day</td><td>Mar, Apr, May, Nov, Dec</td></tr>
-          <tr><td>Dung Beetle <br /><img src="img/Dung_Beetle_ACNH.png"></td><td></td><td>On Ground</td><td>All Day</td><td>Jun, Jul, Aug</td></tr>
-          <tr><td>Earth-boring Dung Beetle <br /><img src="img/Earth-boring_Dung_Beetle_ACNH.png"></td><td>300</td><td>On Ground</td><td>All Day</td><td>Jan,Feb,Mar</td></tr>
-          <tr><td>Scarab Beetle <br /><img src="img/Scarab_Beetle_ACNH.png"></td><td></td><td>On Trees</td><td>11pm - 8am</td><td>Jan, Feb</td></tr>
-          <tr><td>Drone Beetle <br /><img src="img/Drone_Beetle_ACNH.png"></td><td></td><td>On Trees</td><td>All Day</td><td>Dec, Jan, Feb</td></tr>
-          <tr><td>Goliath Beetle <br /><img src="img/Goliath_Beetle_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Dec, Jan, Feb, Mar, Apr</td></tr>
-          <tr><td>Saw Stag <br /><img src="img/Saw_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>All Day</td><td>Jan, Feb</td></tr>
-          <tr><td>Miyama Stag <br /><img src="img/Miyama_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>All Day</td><td>Jan, Feb</td></tr>
-          <tr><td>Giant Stag <br /><img src="img/Giant_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>11pm - 8am</td><td>Jan, Feb</td></tr>
-          <tr><td>Rainbow Stag <br /><img src="img/Rainbow_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>7pm - 8am</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Cyclommatus Stag <br /><img src="img/Cyclommatus_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
-          <tr><td>Golden Stag <br /><img src="img/Golden_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
-          <tr><td>Giraffe Stag <br /><img src="img/Giraffe_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
-          <tr><td>Horned Dynastid <br /><img src="img/Horned_Dynastid_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
-          <tr><td>Horned Atlas <br /><img src="img/Horned_Atlas_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
-          <tr><td>Horned Elephant <br /><img src="img/Horned_Elephant_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
-          <tr><td>Horned Hercules <br /><img src="img/Horned_Hercules_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
-          <tr><td>Walking Stick <br /><img src="img/Walking_Stick_ACNH.png"></td><td></td><td>On Trees</td><td>4am - 8am & 5pm - 7pm</td><td>Jan, Feb, Mar, Apr, May</td></tr>
-          <tr><td>Walking Leaf <br /><img src="img/Walking_Leaf_ACNH.png"></td><td>600</td><td>On Ground (Beneath Trees)</td><td>All Day</td><td>Jan, Feb, Mar</td></tr>
-          <tr><td>Bagworm <br /><img src="img/Bagworm_ACNH.png"></td><td>600</td><td>On Trees</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Ant <br /><img src="img/Ant_ACNH.png"></td><td>80</td><td>On Rotten Turnips andFruit</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Hermit Crab <br /><img src="img/Hermit_Crab_ACNH.png"></td><td>1,000</td><td>On Beach</td><td>7pm - 8am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Wharf Roach <br /><img src="img/Wharf_Roach_ACNH.png"></td><td>200</td><td>On Beach (Rocks)</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Fly <br /><img src="img/Fly_ACNH.png"></td><td></td><td>On Rotten Food and Garbage</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Mosquito <br /><img src="img/Mosquito_ACNH.png"></td><td>130</td><td>Flying</td><td>5pm - 4am</td><td>Dec, Jan, Feb, Mar</td></tr>
-          <tr><td>Flea <br /><img src="img/Flea_ACNH.png"></td><td>70</td><td>On Flea-InfestedVillagers</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
-          <tr><td>Snail <br /><img src="img/Snail_ACNH.png"></td><td>250</td><td>On Rocks</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Pill Bug <br /><img src="img/Pill_Bug_ACNH.png"></td><td>250</td><td>Under Rocks</td><td>11pm - 4pm</td><td>Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Centipede <br /><img src="img/Centipede_ACNH.png"></td><td>300</td><td>Under Rocks</td><td>5pm - 11pm</td><td>Mar, Apr, May, Jun, Jul, Aug, Sep, Nov, Dec</td></tr>
-          <tr><td>Spider <br /><img src="img/Spider_ACNH.png"></td><td>480</td><td>Shaking Trees</td><td>7pm - 8am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
-          <tr><td>Tarantula <br /><img src="img/Tarantula_ACNH.png"></td><td>8,000</td><td>On Ground</td><td>7pm - 4am</td><td>May, Jun, Jul, Aug, Sep, Oct</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Scorpion "></td><td>Scorpion <br /><img src="img/Scorpion_ACNH.png"></td><td>8,000</td><td>On Ground</td><td>7pm - 4am</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Common Butterfly "></td><td>Common Butterfly <br /><img src="img/Common_Butterfly_ACNH.png"></td><td>160</td><td>Above Flowers</td><td>4am - 7pm</td><td>Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Yellow Butterfly "></td><td>Yellow Butterfly <br /><img src="img/Yellow_Butterfly_ACNH.png"></td><td>160</td><td>Flying</td><td>4am - 7pm</td><td>Mar, Apr, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Tiger Butterfly "></td><td>Tiger Butterfly <br /><img src="img/Tiger_Butterfly_ACNH.png"></td><td>240</td><td>Flying</td><td>4am - 7pm</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Peacock Butterfly "></td><td>Peacock Butterfly <br /><img src="img/Peacock_Butterfly_ACNH.png"></td><td>2,500</td><td>Above Purple, Black and Blue Flowers</td><td>4am - 7pm</td><td>Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Common Bluebottle "></td><td>Common Bluebottle <br /><img src="img/Common_Bluebottle_ACNH.png"></td><td>300</td><td>Flying</td><td>4am - 7pm</td><td>Oct , Nov, Dec, Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Paper Kite Butterfly "></td><td>Paper Kite Butterfly <br /><img src="img/Paper_Kite_Butterfly_ACNH.png"></td><td>1,000</td><td>Flying</td><td>8am - 7pm</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Great Purple Emperor "></td><td>Great Purple Emperor <br /><img src="img/Great_Purple_Emperor_ACNH.png"></td><td></td><td>Flying</td><td>4am - 7am</td><td>Nov, Dec, Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Monarch Butterfly "></td><td>Monarch Butterfly <br /><img src="img/Monarch_Butterfly_ACNH.png"></td><td>140</td><td>Flying</td><td>4am - 5pm</td><td>Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Emperor Butterfly "></td><td>Emperor Butterfly <br /><img src="img/Emperor_Butterfly_ACNH.png"></td><td>4,000</td><td>Flying</td><td>5pm - 8am</td><td>Jan,Feb,Mar,Jun,Jul,Aug,Sep,Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Agrias Butterfly "></td><td>Agrias Butterfly <br /><img src="img/Agrias_Butterfly_ACNH.png"></td><td>3,000</td><td>Flying</td><td>8am - 5pm</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Rajah Brooke's Birdwing "></td><td>Rajah Brooke's Birdwing <br /><img src="img/Rajah_Brookes_Birdwing_ACNH.png"></td><td>2,500</td><td>Above Purple, Black and Blue Flowers</td><td>8am - 5pm</td><td>Jun,Jul,Aug,Oct,Nov,Dec,Jan,Feb,Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Queen Alexandra's Birdwing "></td><td>Queen Alexandra's Birdwing <br /><img src="img/Queen_Alexandras_Birdwing_ACNH.png"></td><td>4,000</td><td>Flying</td><td>8am - 4pm</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Moth "></td><td>Moth <br /><img src="img/Moth_ACNH.png"></td><td>130</td><td>Around Light</td><td>7pm - 4am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Atlas Moth "></td><td>Atlas Moth <br /><img src="img/Atlas_Moth_ACNH.png"></td><td>3,000</td><td>On Trees</td><td>7pm - 4am</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Madagascan Sunset Moth "></td><td>Madagascan Sunset Moth <br /><img src="img/Madagascan_Sunset_Moth_ACNH.png"></td><td>2,500</td><td>Flying</td><td>8am - 4pm</td><td>Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Long Locust "></td><td>Long Locust <br /><img src="img/Long_Locust_ACNH.png"></td><td>200</td><td>In Grass</td><td>8am - 7pm</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Migratory Locust "></td><td>Migratory Locust <br /><img src="img/Migratory_Locust_ACNH.png"></td><td>600</td><td>In Grass</td><td>8am - 7pm</td><td>Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Rice Grasshopper "></td><td>Rice Grasshopper <br /><img src="img/Rice_Grasshopper_ACNH.png"></td><td>160</td><td>In Grass</td><td>8am - 7pm</td><td>Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Grasshopper "></td><td>Grasshopper <br /><img src="img/Grasshopper_ACNH.png"></td><td>160</td><td>In Grass</td><td>8am - 5pm</td><td>Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Cricket "></td><td>Cricket <br /><img src="img/Cricket_ACNH.png"></td><td>130</td><td>In Grass</td><td>5pm - 8am</td><td>Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Bell Cricket "></td><td>Bell Cricket <br /><img src="img/Bell_Cricket_ACNH.png"></td><td>430</td><td>In Grass</td><td>5pm - 8am</td><td>Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Mantis "></td><td>Mantis <br /><img src="img/Mantis_ACNH.png"></td><td>430</td><td>On Flowers</td><td>8am - 5pm</td><td>Sep, Oct, Nov, Dec, Jan, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Orchid Mantis "></td><td>Orchid Mantis <br /><img src="img/Orchid_Mantis_ACNH.png"></td><td>2,400</td><td>On Flowers</td><td>8am - 5pm</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Honeybee "></td><td>Honeybee <br /><img src="img/Honeybee_ACNH.png"></td><td>200</td><td>Above Flowers</td><td>8am - 5pm</td><td>Sep, Oct, Nov, Dec, Jan</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Wasp "></td><td>Wasp <br /><img src="img/Wasp_ACNH.png"></td><td>2,500</td><td>Shaking Trees</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Brown Cicada "></td><td>Brown Cicada <br /><img src="img/Brown_Cicada_ACNH.png"></td><td>250</td><td>On Trees</td><td>8am - 5pm</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Robust Cicada "></td><td>Robust Cicada <br /><img src="img/Robust_Cicada_ACNH.png"></td><td></td><td>On Trees</td><td>8am - 5pm</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Giant Cicada "></td><td>Giant Cicada <br /><img src="img/Giant_Cicada_ACNH.png"></td><td></td><td>On Trees</td><td>8am - 5pm</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Walker Cicada "></td><td>Walker Cicada <br /><img src="img/Walker_Cicada_ACNH.png"></td><td>400</td><td>On Trees</td><td>8am - 4pm</td><td>Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Evening Cicada "></td><td>Evening Cicada <br /><img src="img/Evening_Cicada_ACNH.png"></td><td></td><td>On Trees</td><td>4am - 8am & 4pm - 7pm</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Cicada Shell "></td><td>Cicada Shell <br /><img src="img/Cicada_Shell_ACNH.png"></td><td></td><td>On Trees</td><td>All Day</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Red Dragonfly "></td><td>Red Dragonfly <br /><img src="img/Red_Dragonfly_ACNH.png"></td><td>180</td><td>Flying</td><td>8am - 7pm</td><td>Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Darner Dragonfly "></td><td>Darner Dragonfly <br /><img src="img/Darner_Dragonfly_ACNH.png"></td><td>230</td><td>Flying</td><td>8am - 5pm</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Banded Dragonfly "></td><td>Banded Dragonfly <br /><img src="img/Banded_Dragonfly_ACNH.png"></td><td>4,500</td><td>Flying</td><td>8am - 5pm</td><td>Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Damselfly "></td><td>Damselfly <br /><img src="img/Damselfly_ACNH.png"></td><td>500</td><td>Flying</td><td>All Day</td><td>May, Jun, Jul, Aug</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Firefly "></td><td>Firefly <br /><img src="img/Firefly_ACNH.png"></td><td>300</td><td>Above Freshwater</td><td>7pm - 4pm</td><td>Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Mole cricket "></td><td>Mole cricket <br /><img src="img/Mole_cricket_ACNH.png"></td><td>500</td><td>Underground</td><td>All Day</td><td>May, Jun, Jul, Aug, Sep, Oct, Nov</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Pondskater "></td><td>Pondskater <br /><img src="img/Pondskater_ACNH.png"></td><td>130</td><td>In Rivers</td><td>8am - 7pm</td><td>Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Diving Beetle "></td><td>Diving Beetle <br /><img src="img/Diving_Beetle_ACNH.png"></td><td>800</td><td>In Rivers</td><td>8am - 7pm</td><td>Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Giant Water Bug "></td><td>Giant Water Bug <br /><img src="img/Giant_Water_Bug_ACNH.png"></td><td>2,000</td><td>On Ponds and Rivers</td><td>7pm - 8am</td><td>Jan, Feb, Mar, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Stinkbug "></td><td>Stinkbug <br /><img src="img/Stinkbug_ACNH.png"></td><td>120</td><td>On Trees</td><td>All Day</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Man-faced Stink Bug "></td><td>Man-faced Stink Bug <br /><img src="img/Man-faced_Stink_Bug_ACNH.png"></td><td>1,000</td><td>On Flowers</td><td>7pm - 8am</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Ladybug "></td><td>Ladybug <br /><img src="img/Ladybug_ACNH.png"></td><td>200</td><td>On Flowers</td><td>8am - 5pm</td><td>Apr, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Tiger Beetle "></td><td>Tiger Beetle <br /><img src="img/Tiger_Beetle_ACNH.png"></td><td>1,500</td><td>Flying</td><td>All Day</td><td>Sep, Oct, Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Jewel Beetle "></td><td>Jewel Beetle <br /><img src="img/Jewel_Beetle_ACNH.png"></td><td>2,400</td><td>On Trees</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Citrus Long-horned Beetle "></td><td>Citrus Long-horned Beetle <br /><img src="img/Citrus_Long_horned_Beetle_ACNH.png"></td><td>350</td><td>On Tree Stumps</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Rosalia Batesi Beetle "></td><td>Rosalia Batesi Beetle <br /><img src="img/Rosalia_Batesi_Beetle_ACNH.png"></td><td>3,000</td><td>On Tree Stumps</td><td>All Day</td><td>Nov, Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Blue Weevil Beetle "></td><td>Blue Weevil Beetle <br /><img src="img/Blue_Weevil_Beetle_ACNH.png"></td><td></td><td>On Trees</td><td>All Day</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Violin Beetle "></td><td>Violin Beetle <br /><img src="img/Violin_Beetle_ACNH.png"></td><td>450</td><td>On Trees</td><td>All Day</td><td>Mar, Apr, May, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Dung Beetle "></td><td>Dung Beetle <br /><img src="img/Dung_Beetle_ACNH.png"></td><td></td><td>On Ground</td><td>All Day</td><td>Jun, Jul, Aug</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Earth-boring Dung Beetle "></td><td>Earth-boring Dung Beetle <br /><img src="img/Earth-boring_Dung_Beetle_ACNH.png"></td><td>300</td><td>On Ground</td><td>All Day</td><td>Jan,Feb,Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Scarab Beetle "></td><td>Scarab Beetle <br /><img src="img/Scarab_Beetle_ACNH.png"></td><td></td><td>On Trees</td><td>11pm - 8am</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Drone Beetle "></td><td>Drone Beetle <br /><img src="img/Drone_Beetle_ACNH.png"></td><td></td><td>On Trees</td><td>All Day</td><td>Dec, Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Goliath Beetle "></td><td>Goliath Beetle <br /><img src="img/Goliath_Beetle_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Dec, Jan, Feb, Mar, Apr</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Saw Stag "></td><td>Saw Stag <br /><img src="img/Saw_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>All Day</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Miyama Stag "></td><td>Miyama Stag <br /><img src="img/Miyama_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>All Day</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Giant Stag "></td><td>Giant Stag <br /><img src="img/Giant_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>11pm - 8am</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Rainbow Stag "></td><td>Rainbow Stag <br /><img src="img/Rainbow_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>7pm - 8am</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Cyclommatus Stag "></td><td>Cyclommatus Stag <br /><img src="img/Cyclommatus_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Golden Stag "></td><td>Golden Stag <br /><img src="img/Golden_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Giraffe Stag "></td><td>Giraffe Stag <br /><img src="img/Giraffe_Stag_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Horned Dynastid "></td><td>Horned Dynastid <br /><img src="img/Horned_Dynastid_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Horned Atlas "></td><td>Horned Atlas <br /><img src="img/Horned_Atlas_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Horned Elephant "></td><td>Horned Elephant <br /><img src="img/Horned_Elephant_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Horned Hercules "></td><td>Horned Hercules <br /><img src="img/Horned_Hercules_ACNH.png"></td><td></td><td>On Trees</td><td>5pm - 8am</td><td>Jan, Feb</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Walking Stick "></td><td>Walking Stick <br /><img src="img/Walking_Stick_ACNH.png"></td><td></td><td>On Trees</td><td>4am - 8am & 5pm - 7pm</td><td>Jan, Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Walking Leaf "></td><td>Walking Leaf <br /><img src="img/Walking_Leaf_ACNH.png"></td><td>600</td><td>On Ground (Beneath Trees)</td><td>All Day</td><td>Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Bagworm "></td><td>Bagworm <br /><img src="img/Bagworm_ACNH.png"></td><td>600</td><td>On Trees</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Ant "></td><td>Ant <br /><img src="img/Ant_ACNH.png"></td><td>80</td><td>On Rotten Turnips and Fruit</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Hermit Crab "></td><td>Hermit Crab <br /><img src="img/Hermit_Crab_ACNH.png"></td><td>1,000</td><td>On Beach</td><td>7pm - 8am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Wharf Roach "></td><td>Wharf Roach <br /><img src="img/Wharf_Roach_ACNH.png"></td><td>200</td><td>On Beach (Rocks)</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Fly "></td><td>Fly <br /><img src="img/Fly_ACNH.png"></td><td></td><td>On Rotten Food and Garbage</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Mosquito "></td><td>Mosquito <br /><img src="img/Mosquito_ACNH.png"></td><td>130</td><td>Flying</td><td>5pm - 4am</td><td>Dec, Jan, Feb, Mar</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Flea "></td><td>Flea <br /><img src="img/Flea_ACNH.png"></td><td>70</td><td>On Flea-Infested Villagers</td><td>All Day</td><td>Oct, Nov, Dec, Jan, Feb, Mar, Apr, May</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Snail "></td><td>Snail <br /><img src="img/Snail_ACNH.png"></td><td>250</td><td>On Rocks</td><td>All Day</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Pill Bug "></td><td>Pill Bug <br /><img src="img/Pill_Bug_ACNH.png"></td><td>250</td><td>Under Rocks</td><td>11pm - 4pm</td><td>Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Centipede "></td><td>Centipede <br /><img src="img/Centipede_ACNH.png"></td><td>300</td><td>Under Rocks</td><td>5pm - 11pm</td><td>Mar, Apr, May, Jun, Jul, Aug, Sep, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Spider "></td><td>Spider <br /><img src="img/Spider_ACNH.png"></td><td>480</td><td>Shaking Trees</td><td>7pm - 8am</td><td>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</td></tr>
+          <tr><td><input type="checkbox" name="ACNH_Tarantula "></td><td>Tarantula <br /><img src="img/Tarantula_ACNH.png"></td><td>8,000</td><td>On Ground</td><td>7pm - 4am</td><td>May, Jun, Jul, Aug, Sep, Oct</td></tr>
         </tbody>
       </table>
       <script>
+                function filtertables(){
+                  $(".table-sort tbody tr").filter(function() {
+                      var isInSearch = $(this).text().toLowerCase().indexOf($("#myInput").val().toLowerCase()) > -1;
+                      var isChecked = $(this).find("input").prop('checked');
+                      var isChecking = $("#unticked").prop('checked');
+                      $(this).toggle( isInSearch && !( isChecking &&  isChecked));
+                      
+                  });
+                };
                 $(document).ready(function(){
                   
                   $("#myInput").on("keyup", function() {
-                    var value = $(this).val().toLowerCase();
-                    $("#fish tbody tr").filter(function() {
-                      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                    });
-                    $("#bugs tbody tr").filter(function() {
-                      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                    });
+                    var value = $("#myInput").val().toLowerCase();
+                    filtertables();
                   });
-                  
+                  $("#unticked").on("change",function() {
+                    filtertables();
+                  });
+                  $(".table-sort tbody td input").on("change",function() {
+                    filtertables();
+                  });
                   $("#fish").DataTable({
                     "paging": false,
                     "ordering": true,
@@ -238,7 +251,23 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
                     "searching": false,
                     "info": false
                   });
+                    // read the current/previous setting
+                  $("input.box[type=checkbox]").each(function() {
+                      var name = $(this).attr('name');
+                      if ($.cookie(name) && $.cookie(name) == "true") {
+                          $(this).prop('checked', $.cookie(name));
+                      }
+                  });
+                    // event management
+                  $("input.box[type=checkbox]").change(function() {
+                      var name = $(this).attr("name");
+                      $.cookie(name, $(this).prop('checked'), {
+                          path: '/',
+                          expires: 3650
+                    });
+                  });
                 });
+                
 		
                 </script> </div>
   </body>
