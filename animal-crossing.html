@@ -32,6 +32,7 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
             }
             td.red{background-color:red;color:white;}
             td.yellow{background-color:yellow;color:black;}
+            td.gold{background-color:goldenrod;color:black;}
             td.blue{background-color:blue;color:white;}
             td.purple{background-color:purple;color:white;}
             td.orange{background-color:orange;color:black;}
@@ -42,15 +43,16 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
         </style>
       <script>
         $(document).ready(function(){
-          $("td.red").text("Red");
-          $("td.yellow").text("Yellow");
-          $("td.blue").text("Blue");
-          $("td.purple").text("Purple");
-          $("td.orange").text("Orange");
-          $("td.pink").text("Pink");
-          $("td.white").text("White");
-          $("td.black").text("Black");
-          $("td.green").text("Green");
+          $("td.red").append("Red");
+          $("td.yellow").append("Yellow");
+          $("td.gold").append("Gold");
+          $("td.blue").append("Blue");
+          $("td.purple").append("Purple");
+          $("td.orange").append("Orange");
+          $("td.pink").append("Pink");
+          $("td.white").append("White");
+          $("td.black").append("Black");
+          $("td.green").append("Green");
         });
       </script>
 
@@ -68,28 +70,15 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
             </thead>
             <tbody>
               <tr><td class="red" /><td class="orange" /><td class="pink" /></tr>
-              <tr><td class="white" /><td class="orange" /><td class="blue"></tr>
               <tr><td class="white" /><td class="white" /><td class="blue" /></tr>
+              <tr><td class="pink" /><td class="pink" /><td class="purple" /></tr>
               <tr><td class="blue" /><td class="pink" /><td class="purple" /></tr>
               <tr><td class="blue" /><td class="blue" /><td class="purple" /></tr>
             </tbody>
           </table>
         </div>
 
-        <div class="col-sm"><strong>Pansies</strong>
-          <table class="table table-bordered table-sm">
-            <thead>
-              <tr><th>This</th><th>Plus</th><th>Equals</th></tr>
-            </thead>
-            <tbody>
-              <tr><td class="white" /><td class="white" /><td class="blue" /></tr>
-              <tr><td class="red" /><td class="yellow" /><td class="orange" /></tr>
-              <tr><td class="blue" /><td class="blue" /><td class="purple" /></tr>
-              <tr><td class="red" /><td class="red" /><td class="purple" /></tr>
-            </tbody>
-          </table></div>
-
-          <div class="col-sm"><strong>Tulips</strong>
+                  <div class="col-sm"><strong>Tulips</strong>
             <table class="table table-bordered table-sm">
               <thead>
                 <tr><th>This</th><th>Plus</th><th>Equals</th></tr>
@@ -99,6 +88,7 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
                 <tr><td class="red" /><td class="red" /><td class="black" /></tr>
                 <tr><td class="red" /><td class="white" /><td class="pink" /></tr>
                 <tr><td class="orange" /><td class="orange" /><td class="purple" /></tr>
+                <tr><td class="black" /><td class="black" /><td class="purple" /></tr>
               </tbody>
             </table></div>
 
@@ -110,6 +100,7 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
                 <tbody>
                   <tr><td class="red" /><td class="yellow" /><td class="orange" /></tr>
                   <tr><td class="red" /><td class="red" /><td class="black" /></tr>
+                  <tr><td class="orange" /><td class="orange" /><td class="black" /></tr>
                   <tr><td class="red" /><td class="white" /><td class="pink" /></tr>
                 </tbody>
               </table></div>
@@ -123,7 +114,9 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
                       <tr><td class="red" /><td class="yellow" /><td class="orange" /></tr>
                       <tr><td class="white" /><td class="red" /><td class="pink" /></tr>
                       <tr><td class="white" /><td class="white" /><td class="blue" /></tr>
+                      <tr><td class="red" /><td class="red" /><td class="blue" /></tr>
                   <tr><td class="blue" /><td class="blue" /><td class="purple" /></tr>
+                  <tr><td class="orange" /><td class="orange" /><td class="purple" /></tr>
             </tbody>
             </table></div>
 
@@ -151,16 +144,37 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
                         </tbody>
                       </table></div>
 
-                      <div class="col-sm"><strong>Roses</strong>
+                      <div class="col-sm"><strong>Pansies</strong>
                         <table class="table table-bordered table-sm">
                           <thead>
                             <tr><th>This</th><th>Plus</th><th>Equals</th></tr>
                           </thead>
                           <tbody>
+                            <tr><td class="white" /><td class="white" /><td class="blue" /></tr>
+                            <tr><td class="red" /><td class="yellow" /><td class="orange" /></tr>
+                            <tr><td class="red" /><td class="blue" /><td class="red">Special </td></tr>
+                            <tr><td class="orange" /><td class="blue" /><td class="orange">Special </td></tr>
+                            <tr><td class="red" /><td class="yellow" /><td class="orange" /></tr>
+                            <tr><td class="blue" /><td class="blue" /><td class="purple" /></tr>
+                            <tr><td class="red">Special </td><td class="red">Special </td><td class="purple" /></tr>
+                            <tr><td class="orange">Special </td><td class="orange">Special </td><td class="purple" /></tr>
+                          </tbody>
+                        </table></div>
+
+                      <div class="col-sm"><strong>Roses</strong>
+                        <table class="table table-bordered table-sm">
+                          <caption>Gold only available with gold watering can.</caption>
+                          <thead>
+                            <tr><th>This</th><th>Plus</th><th>Equals</th></tr>
+                          </thead>
+                          <tbody>
+                          <tr><td class="red" /><td class="white" /><td class="pink" /></tr>
                           <tr><td class="red" /><td class="yellow" /><td class="orange" /></tr>
                           <tr><td class="white" /><td class="white" /><td class="purple" /></tr>
                           <tr><td class="red" /><td class="red" /><td class="black" /></tr>
-                            <tr><td class="orange" /><td class="orange" /><td class="blue" /></tr>
+                          <tr><td class="orange" /><td class="purple" /><td class="red">Special </td></tr>
+                          <tr><td class="red">Special </td><td class="red">Special </td><td class="blue" /></tr>
+                          <tr><td class="black" /><td class="black" /><td class="gold" /></tr>
                           </tbody>
                         </table></div>
                         
